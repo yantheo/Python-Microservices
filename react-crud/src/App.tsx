@@ -12,21 +12,22 @@ import ProductEdit from './components/ProductEdit';
 function App() {
   return (
     <div className="App">
-      <Nav/>
+      <Nav />
       <div className="container-fluid">
-        <div className="row">
-        <Menu/>
-          <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <BrowserRouter>
+        <BrowserRouter>
+          <div className="row">
+            <Menu />
+            <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
               <Routes>
-                <Route path='/' element={<Main/>} />
+                <Route path='/' element={<Main />} />
                 <Route path='/admin/products' element={<Products />} />
                 <Route path='/admin/products/create' element={<ProductCreate />} />
-                <Route path='/admin/products/:id/edit' element={<ProductEdit/>}/>
+                <Route path='/admin/products/:id/edit' element={<ProductEdit />} />
               </Routes>
-            </BrowserRouter>
-          </main>
-        </div>
+            </main>
+          </div>
+        </BrowserRouter>
+
       </div>
       <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossOrigin="anonymous"></script>
 

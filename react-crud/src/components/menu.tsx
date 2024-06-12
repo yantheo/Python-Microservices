@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return <div className="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
@@ -22,16 +23,9 @@ const Menu = () => {
 
         <ul className="nav flex-column mb-auto">
           <li className="nav-item">
-            <a className="nav-link d-flex align-items-center gap-2" href="#">
-              <svg className="bi"><use xlinkHref="#gear-wide-connected"></use></svg>
-              Settings
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link d-flex align-items-center gap-2" href="#">
-              <svg className="bi"><use xlinkHref="#door-closed"></use></svg>
-              Sign out
-            </a>
+            <Link className="nav-link d-flex align-items-center gap-2" to='/admin/products/'>
+              Checklist items
+            </Link>
           </li>
         </ul>
       </div>
